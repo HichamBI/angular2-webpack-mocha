@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   value = 0;
+  items : string[] = ["Item 1", "Item 2"];
 
   onIncrementClick() {
     this.value = Math.min(100, ++this.value);

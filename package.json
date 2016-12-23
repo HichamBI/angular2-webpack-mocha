@@ -4,12 +4,13 @@
   "version": "1.0.0",
   "description": "Running Angular 2 tests with webpack and mocha",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 8080",
+    "start": "webpack-dev-server --inline --progress --port 9090",
     "test:karma": "karma start --single-run",
     "test:karma:watch": "karma start",
     "test": "mocha-webpack",
     "test:watch": "mocha-webpack --watch",
-    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail"
+    "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
+    "test:mocha" : "webpack-dev-server --config config/webpack.test.js --inline --progress --port 9090"
   },
   "dependencies": {
     "@angular/common": "~2.4.1",

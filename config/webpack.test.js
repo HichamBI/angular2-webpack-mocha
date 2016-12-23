@@ -3,6 +3,18 @@ var helpers = require('./helpers');
 module.exports = {
   devtool: 'cheap-module-source-map',
 
+   entry: {
+       'polyfills': './src/polyfills.ts',
+       'vendor': './src/vendor.ts',
+       'test': './entry-file.js',
+   },
+
+    output: {
+        path: helpers.root('tests'),
+        filename: 'test.bundle.js',
+        publicPath: 'http://localhost:9090/tests'
+    },
+
   resolve: {
     extensions: ['', '.ts', '.js']
   },
@@ -11,7 +23,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+        loaders: ['mocha', 'awesome-typescript-loader', 'angular2-template-loader']
       },
       {
         test: /\.html$/,

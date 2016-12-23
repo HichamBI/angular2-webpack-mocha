@@ -1,5 +1,5 @@
 import { getTestBed, TestBed } from '@angular/core/testing';
-import { AppComponent } from './app.component';
+import { AppComponent } from '../app.component';
 import { By } from '@angular/platform-browser';
 import { expect } from 'chai';
 import { spy } from 'sinon';
@@ -24,6 +24,7 @@ for (var i = 0; i < 10; i++) {
       const h2 = fixture.debugElement.query(By.css('h2'));
 
       expect(h2.nativeElement.textContent).to.equal('Value: 0');
+
     });
 
     it('should increment the value', () => {
