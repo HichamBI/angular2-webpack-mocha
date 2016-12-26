@@ -10,7 +10,7 @@
     "test": "mocha-webpack",
     "test:watch": "mocha-webpack --watch",
     "build": "rimraf dist && webpack --config config/webpack.prod.js --progress --profile --bail",
-    "test:mocha" : "webpack-dev-server --config config/webpack.test.js --inline --progress --port 9090"
+    "test:mocha": "webpack-dev-server --config config/webpack.mocha-browser.js --inline --progress --port 9090"
   },
   "dependencies": {
     "@angular/common": "~2.4.1",
@@ -50,6 +50,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^1.8.0",
     "mocha": "^3.1.2",
+    "mocha-loader": "^1.0.0",
     "mocha-webpack": "^0.7.0",
     "null-loader": "^0.1.1",
     "phantomjs-prebuilt": "^2.1.7",

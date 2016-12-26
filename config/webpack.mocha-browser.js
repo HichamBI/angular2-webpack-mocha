@@ -4,7 +4,7 @@ module.exports = {
   devtool: 'cheap-module-source-map',
 
    entry: {
-       'test': './entry-file.js'
+       'test': 'mocha!./mocha-browser-entry-file.js'
    },
 
     output: {
@@ -21,7 +21,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loaders: ['mocha', 'awesome-typescript-loader', 'angular2-template-loader']
+        loaders: ['awesome-typescript-loader', 'angular2-template-loader']
       },
       {
         test: /\.html$/,
